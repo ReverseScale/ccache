@@ -31,7 +31,13 @@ ccache
 ls -all llvm-gcc*得到llvm-gcc文件的信息
 ```
 
-可以发现lvm-gcc-4.2实际是软链到../llvm-gcc-4.2/bin/llvm-gcc-4.2,../llvm-gcc-4.2/bin/llvm-gcc-4.2才是真正的llvm-gcc-4.2“所在地”
+可以发现lvm-gcc-4.2实际是软链到
+
+```
+../llvm-gcc-4.2/bin/llvm-gcc-4.2,../llvm-gcc-4.2/bin/llvm-gcc-4.2
+```
+
+才是真正的llvm-gcc-4.2位置。
 
 现在需要对文件进行修改：
 
@@ -63,7 +69,7 @@ which llvm-gcc-4.2
 
 存在问题：如果项目是采用clang进行编译，编译会失败，目前还没找到办法解决
 
-======
+-----
 
 About
 -----
