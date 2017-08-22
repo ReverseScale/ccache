@@ -35,7 +35,13 @@ ls -all llvm-gcc*得到llvm-gcc文件的信息
 
 现在需要对文件进行修改：
 
-首先，将Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/的llvm-gcc-4.2软链到ccache(ccache安装在/usr/local/bin下，因此可以执行 
+首先，将
+
+```
+Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/的llvm-gcc-4.2
+```
+
+软链到ccache(ccache安装在/usr/local/bin下，因此可以执行 
 
 ```
 ls -s /usr/local/bin/ccache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/llvm-gcc-4.2）
@@ -53,7 +59,7 @@ which llvm-gcc-4.2
 
 选取了三个项目进行实际的测试
 
-![](http://og1yl0w9z.bkt.clouddn.com/17-8-22/13073301.jpg)
+![](http://og1yl0w9z.bkt.clouddn.com/17-8-22/56033854.jpg)
 
 存在问题：如果项目是采用clang进行编译，编译会失败，目前还没找到办法解决
 
